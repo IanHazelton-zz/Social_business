@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-image: url('../../target/img/camera-girl.jpg') ;
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #000;
+  overflow-x: hidden;
+      &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom right,$gradient-start,$gradient-stop);
+      opacity: 1;
+      z-index: -1;
+      }
+}
+
+.wrap {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.card__cnt {
+  align-items: center;
+  background-color: $cardBg;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 45rem;
+  margin: auto;
+  justify-content: flex-start;
+  width: 40rem;
+}
+
+.profile-img__cnt {
+  min-height: 14rem;
+}
+
+.profile__img {
+  border-radius: 75px;
+  border: 15px $cardBg solid;
+  height: 150px;
+  width: 150px;
+}
+
+.text__cnt {
+  margin: 2rem;
+}
+
+.text {
+  color: $text--main;
+  font-family: 'Source Sans Pro', helvetica, sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 2.5rem;
+}
+
+.job {
+  font-size: 1.5rem;
+  line-height: 3;
+}
+
+hr {
+  border-bottom: none;
+  width: 80%;
+}
+
+.icon__cnt {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  width: 80%;
+}
+
+.icon {
+  color: $icon;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  transition: color 300ms ease;
+  &:hover {
+    color: $brand--primary;
+  }
+}
